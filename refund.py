@@ -525,12 +525,12 @@ if 'session_sequence' in st.session_state:
 @st.cache_data
 def load_config():
     return {
-        'url': os.getenv('ODOO_URL', 'https://prashanti-sarees.odoo.com/'),
-        'db': os.getenv('ODOO_DB', 'ganeshvana-prasanthilive-main-15204134'),
-        'username': os.getenv('ODOO_USERNAME', 'admin@test.com'),
-        'password': os.getenv('ODOO_PASSWORD', 'admin@123'),
-        'user_email': os.getenv('USER_EMAIL', 'user@example.com'),
-        'user_code': os.getenv('USER_CODE', '1234')
+        'url': os.getenv('ODOO_URL'),
+        'db': os.getenv('ODOO_DB'),
+        'username': os.getenv('ODOO_USERNAME'),
+        'password': os.getenv('ODOO_PASSWORD'),
+        'user_email': os.getenv('USER_EMAIL'),
+        'user_code': os.getenv('USER_CODE')
     }
 
 def authenticate_user(email, code):
